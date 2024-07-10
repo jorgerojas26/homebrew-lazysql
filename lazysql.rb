@@ -10,7 +10,7 @@ class Lazysql < Formula
   on_macos do
     on_intel do
       url "https://github.com/jorgerojas26/lazysql/releases/download/v0.2.3/lazysql_Darwin_x86_64.tar.gz"
-      sha256 "c0e810e7377be0f04c605a827b104ed63a752b9c7c5d3696ecafed3ff56f0d99"
+      sha256 "ad11bd01ec87a4d02234311b01af4817bec2160bd6e0ea1f6684a840cf104b31"
 
       def install
         bin.install "lazysql"
@@ -18,7 +18,7 @@ class Lazysql < Formula
     end
     on_arm do
       url "https://github.com/jorgerojas26/lazysql/releases/download/v0.2.3/lazysql_Darwin_arm64.tar.gz"
-      sha256 "7ae5735dd86998d88357752537505dec5672de421510a4d6c7dd65202d00c772"
+      sha256 "14fff3115a4468d2f719874a94feb5b04ab68fe4ad434ef4f245309947291048"
 
       def install
         bin.install "lazysql"
@@ -30,7 +30,7 @@ class Lazysql < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jorgerojas26/lazysql/releases/download/v0.2.3/lazysql_Linux_x86_64.tar.gz"
-        sha256 "c1a2ea0cc5fa0381f30edd4bc1b7a4e9c7dbcfb7a7d724b5e77ddfb086aeb3fd"
+        sha256 "fcce4ac7918bba2011f62cc601ce8a553615816ef149cdda31baa45145794327"
 
         def install
           bin.install "lazysql"
@@ -40,12 +40,16 @@ class Lazysql < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jorgerojas26/lazysql/releases/download/v0.2.3/lazysql_Linux_arm64.tar.gz"
-        sha256 "524015006392f206c08aa36927390a8438d34acac7664299d91f5cedcaf4dcd5"
+        sha256 "20c0eb3360e99b80cf958d019e7d0cb8eadec3d1c0eeeca8d14b5cd99ff0a357"
 
         def install
           bin.install "lazysql"
         end
       end
     end
+  end
+
+  test do
+    system "#{bin}/lazysql version"
   end
 end
