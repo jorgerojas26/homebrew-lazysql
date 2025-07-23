@@ -5,20 +5,20 @@
 class Lazysql < Formula
   desc ""
   homepage "https://github.com/jorgerojas26/lazysql"
-  version "0.3.8"
+  version "0.3.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.8/lazysql_Darwin_x86_64.tar.gz"
-      sha256 "51d8c28dcc59a721f3ff44264cf1f9181f318492adcc048dc9dd79cf2cb5aef1"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.9/lazysql_Darwin_x86_64.tar.gz"
+      sha256 "7c846fa2027ffcc851858d5fd5dabde454770b9e4081f156821053ce18f48939"
 
       def install
         bin.install "lazysql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.8/lazysql_Darwin_arm64.tar.gz"
-      sha256 "42df99d4ba2990798c189cd7e96175d8a174785fbad1d5266603f77e48ba8015"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.9/lazysql_Darwin_arm64.tar.gz"
+      sha256 "74b49b45e5991bb5dbd4f0e37fe664f6bd36f88551825d72dfc8875cc2ae5cde"
 
       def install
         bin.install "lazysql"
@@ -28,15 +28,15 @@ class Lazysql < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.8/lazysql_Linux_x86_64.tar.gz"
-      sha256 "d01a9b188face5724bc8bdd9d4447b82f593bdd902c7ab265f499bac16604612"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.9/lazysql_Linux_x86_64.tar.gz"
+      sha256 "ce6b834ae4cd02b50fed08fdd72acdbc55165a4fe9550fddea73296ab21f0fd1"
       def install
         bin.install "lazysql"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.8/lazysql_Linux_arm64.tar.gz"
-      sha256 "ebbd62ffbdd70180b22f1ff4ae3d6d6a91deeae7aae3a1ccb28b345b96992683"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.3.9/lazysql_Linux_arm64.tar.gz"
+      sha256 "3ccc62cf5b2b18b800a780665f2a4399cc020ac85cb0c27c562becdbbbc06546"
       def install
         bin.install "lazysql"
       end
