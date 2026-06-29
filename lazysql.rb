@@ -5,20 +5,20 @@
 class Lazysql < Formula
   desc ""
   homepage "https://github.com/jorgerojas26/lazysql"
-  version "0.5.4"
+  version "0.5.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.4/lazysql_Darwin_x86_64.tar.gz"
-      sha256 "6a372c36804c0b861178cb5569197f5a873e74ae370188643cfb5b31f55d5de1"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.5/lazysql_Darwin_x86_64.tar.gz"
+      sha256 "714924dd54529723f5cd6c2f301b640716ddc0d5068f0b39306b22904abf12d8"
 
       define_method(:install) do
         bin.install "lazysql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.4/lazysql_Darwin_arm64.tar.gz"
-      sha256 "11534f010f9699af04e99a915a7730f949a3fc4c0e6ffc3a085d6433f8e648c3"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.5/lazysql_Darwin_arm64.tar.gz"
+      sha256 "73bc35b72ecba85d3ea595a044db29600bb9313186c0bfaff5743474f8ea3416"
 
       define_method(:install) do
         bin.install "lazysql"
@@ -28,15 +28,15 @@ class Lazysql < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.4/lazysql_Linux_x86_64.tar.gz"
-      sha256 "0471e340e4038bae2c04bf36744d5d5c9864afa488f3bd28e975397cc64851a4"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.5/lazysql_Linux_x86_64.tar.gz"
+      sha256 "aef71f67af3e085ef75bda1385fddbd0b0b8cba9fd6ab4f3f72a8605b68c3535"
       define_method(:install) do
         bin.install "lazysql"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.4/lazysql_Linux_arm64.tar.gz"
-      sha256 "cbb094d85cc44e6ee609a8c3e16c1bf32df0609a927ac2750b348aa181d57d78"
+      url "https://github.com/jorgerojas26/lazysql/releases/download/v0.5.5/lazysql_Linux_arm64.tar.gz"
+      sha256 "24287e6d958079b67062571c499e70d0610dcac743129e6e0fc6f0869a8b29fd"
       define_method(:install) do
         bin.install "lazysql"
       end
